@@ -1,7 +1,6 @@
 package ru.skillbranch.kotlinexample
 
 import androidx.annotation.VisibleForTesting
-import ru.skillbranch.kotlinexample.extensions.clearPhone
 import java.math.BigInteger
 import java.security.MessageDigest
 import java.security.SecureRandom
@@ -194,3 +193,5 @@ class User private constructor(
         }
     }
 }
+
+fun String.clearPhone() = replace("[^+\\d]".toRegex(), "")
