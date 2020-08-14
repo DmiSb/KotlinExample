@@ -26,7 +26,7 @@ object UserHolder {
             User.makeUser(fullName = fullName, phone = phone)
                 .also { user ->
                     if (map[phone] == null) map[phone] = user
-                    else throw IllegalArgumentException("A user with this email already exists")
+                    else throw IllegalArgumentException("A user with this phone already exists")
                 }
         } else throw IllegalArgumentException("Enter a valid phone number starting with a + and containing 11 digits")
     }
